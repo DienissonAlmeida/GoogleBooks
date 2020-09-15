@@ -1,0 +1,10 @@
+<div *ngIf="books.length > 0" id="f">
+ <div class="container">
+    <div class="col-md-2 results-container" *ngFor="let book of books">
+      {{book.title}}
+      <p></p>
+      <p *ngIf="book.smallThumbnail"><img src={{book.smallThumbnail}} /></p>
+      <button class="btn btn-outline-success"><i class="fa fa-trash" (click)="OnExclude(book.id)"></i></button>
+   </div>
+ </div>
+</div>

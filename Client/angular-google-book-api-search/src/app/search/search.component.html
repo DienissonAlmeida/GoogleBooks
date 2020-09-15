@@ -1,0 +1,14 @@
+
+<div>
+    <!-- <input type="search" placeholder="Procurar Livros" #search id="search" /> -->
+    <!-- <button (click)="OnSearch(search.value)">Buscar</button> -->
+
+</div>
+<div *ngIf="books" id="f">
+ <div class="container">
+    <div class="col-md-2 results-container" *ngFor="let book of books" [routerLink]="['/searchId', book.id]">
+      {{book.title}}
+      <p *ngIf="book.smallThumbNail"><img src={{book.smallThumbNail}} /></p>
+   </div>
+ </div>
+</div>

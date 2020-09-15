@@ -1,0 +1,29 @@
+
+<div id="f" class="container">
+  <div class="col-md-2">
+    <div class="results-container rightBorder" *ngIf="book">
+
+      <p><img src={{book.smallThumbnail}} /></p>
+      <h4>Price {{book.Price}}</h4>
+    </div>
+  </div>
+  <div class="col-md-9 rightBorder" *ngIf="book">
+   <h2> {{book.title}} </h2>
+   <h4>Description</h4>
+   <p>{{book.description}}</p>
+   <hr />
+   <h4>Category</h4>
+   <p>{{book.categories}}</p>
+   <h4>Author</h4>
+   <p>{{book.authors}}</p>
+   <h4>Publisher</h4>
+   <p>{{book.publisher}}</p>
+   <h4>Published date</h4>
+   <p>{{book.publishedDate}}</p>
+    <h4>Language</h4>
+   <p>{{book.language}}</p>
+   <hr />
+   <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="OnFavorite(book)">Favoritar</button>
+  </div>
+  <div>
+</div>
