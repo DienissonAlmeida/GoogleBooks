@@ -20,19 +20,13 @@ namespace GoogleBooks.Domain.Domain
         public BooksCatalog(string keywords, int pageNumber, int pageSize)
         {
             if (keywords.Length < minimalKeywordsLength)
-            {
                 throw new InvalidBooksCatalogException(ExceptionMessages.InvalidKeyword);
-            }
 
             if (pageNumber < minimalPageNumber)
-            {
                 throw new InvalidBooksCatalogException(ExceptionMessages.InvalidPageNumber);
-            }
 
             if (pageSize < minimalPageSize)
-            {
                 throw new InvalidBooksCatalogException(ExceptionMessages.InvalidPageSize);
-            }
 
             Keywords = keywords;
             PageNumber = pageNumber;

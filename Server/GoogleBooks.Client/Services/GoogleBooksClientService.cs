@@ -56,14 +56,11 @@ namespace GoogleBooks.Client.Services
 
         #region Private Methods
         private async Task<string> GetResponseStringAsync()
-        {
-            return await _httpClient.GetStringAsync(_urlFactory.Url);
-        }
+            => await _httpClient.GetStringAsync(_urlFactory.Url);
 
         private T DeserializeResponse<T>(string response) where T : class
-        {
-            return JsonConvert.DeserializeObject<T>(response);
-        }
+            => JsonConvert.DeserializeObject<T>(response);
+
         #endregion
     }
 }

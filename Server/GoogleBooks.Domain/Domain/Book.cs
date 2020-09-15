@@ -12,14 +12,10 @@ namespace GoogleBooks.Domain.Domain
         public Book(string bookId)
         {
             if (string.IsNullOrWhiteSpace(bookId))
-            {
                 throw new InvalidBookException(ExceptionMessages.EmptyId);
-            }
 
             if (bookId.Length != bookIdLength)
-            {
                 throw new InvalidBookException(ExceptionMessages.InvalidIdLength);
-            }
 
             Id = bookId;
         }

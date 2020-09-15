@@ -38,9 +38,7 @@ namespace GoogleBooks.Api.Services
             try
             {
                 if (book == null)
-                {
                     return new IndividualBookDetailsResult(new InvalidBookException(ExceptionMessages.NullArgument), StatusEnum.InvalidParamater);
-                }
 
                 var individualBookDetails = await _googleBooksClientService.GetBookDetailsAsync(book.Id);
                 if (individualBookDetails == null)

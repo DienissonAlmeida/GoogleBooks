@@ -17,9 +17,7 @@ namespace GoogleBooks.Client.Factories
         }
 
         public void SetBookDetailsUrl(string bookId)
-        {
-            Url = $"{ _options.GetBookDetails }{ bookId }";
-        }
+            => Url = $"{ _options.GetBookDetails }{ bookId }";
 
         public void SetBooksCatalogUrl(BooksCatalog booksCatalog)
         {

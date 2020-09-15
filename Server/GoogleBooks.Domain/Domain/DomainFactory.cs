@@ -10,8 +10,6 @@ namespace GoogleBooks.Domain.Domain
         }
 
         public BooksCatalog CreateBooksCatalog(BooksCatalogSearch booksCatalogSearch)
-        {
-            return new BooksCatalog(booksCatalogSearch.Keywords, booksCatalogSearch.PageNumber, booksCatalogSearch.PageSize);
-        }
+            => new BooksCatalog(booksCatalogSearch.Keywords, booksCatalogSearch.PageNumber, booksCatalogSearch.PageSize);
     }
 }
